@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast')
 
 // Express is just a function and we call it to create a new express application
 const app = express() 
-
+const port = process.env.PORT || 3000
 
 console.log(__dirname)
 console.log(__filename)
@@ -136,7 +136,7 @@ app.get('*', (request, response) => {
 
 
 // start the server at the end
-app.listen(3000, ()=> console.log('Congrats!!!! Server is up on port 3000'))
+app.listen(port, ()=> console.log(`Congrats!!!! Server is up on port ${port}`))
 
 
 
